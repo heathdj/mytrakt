@@ -1,6 +1,13 @@
 {
     "scripts": {
-        "start": "deno run --allow-env --allow-net --allow-read --allow-plugin --allow-write src/main.ts",
-        "watch": "true"
+        "start": {
+            "cmd": "deno run --allow-env --allow-net --allow-read --allow-plugin --allow-write src/main.ts",
+            "watch": "true"
+        }
+    },
+    "watcher": {
+        "exts": ["js", "jsx", "ts", "tsx", "json"],
+        "match": ["**/*.*"],
+        "skip": ["Dockerfile"]
     }
 }

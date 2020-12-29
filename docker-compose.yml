@@ -21,8 +21,9 @@ services:
     init: true
     environment:
       - PORT=3001
-      - URL="http://localhost"
+      - URL=http://localhost
       - MONGO_URL=mongodb://api_mongo:27017
+      - DB_NAME=todo
     volumes:
       - ./api/src:/usr/app/src
     ports:

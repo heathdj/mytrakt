@@ -7,8 +7,8 @@ const URL = Deno.env.get("URL") || 'http://localhost';
 const PORT = +(Deno.env.get("PORT") || 3001);
 const MONGO_URL = Deno.env.get("MONGO_URL") || 'mongodb://127.0.0.1:27017';
 
-const mongoDB = new MongoDatabase('todo', MONGO_URL);
-await mongoDB.connect();
+const mongoDB = MongoDatabase.getInstance();
+
 const app = new Application();
 
 
