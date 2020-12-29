@@ -1,6 +1,6 @@
 import MongoDatabase from '../helper/mongodb.ts';
 
-const db = await MongoDatabase.getInstance()
+const db = await MongoDatabase.getInstance();
 const mongoDb = db.getDatabase.collection('todo');
 
 const get = async(context: any) => {
